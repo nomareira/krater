@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Krater — Musiker & Produzent</title>
+  <meta name="description" content="Krater — Musiker, Produzent und Toningenieur.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0C0F0A;
+      --text:#ffffff;
+      --muted:#d1d1d1;
+      --accent:#FF784F;
+      --card:rgba(255,255,255,0.04);
+      --round:14px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Nunito, system-ui, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+      font-size:1.2rem;
+    }
+
+    header{
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:32px;
+    }
+
+    h1{
+      font-family:Montserrat, sans-serif;
+      font-size:2.8rem;
+      margin:0;
+      color:var(--accent);
+    }
+
+    .lead{
+      color:var(--muted);
+      font-size:1.3rem;
+      margin-top:6px;
+    }
+
+    nav{
+      margin-top:18px;
+    }
+
+    nav a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    .link-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .link-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      background:var(--card);
+      border-radius:var(--round);
+      font-family:Montserrat;
+      font-weight:700;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,0.08);
+      transition:transform .15s ease, background .15s ease, border .15s ease;
+    }
+
+    .link-btn:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.2);
+    }
+
+    .link-btn.yt:hover{border-color:#ff3d3d;}
+    .link-btn.sp:hover{border-color:#1db954;}
+    .link-btn.bc:hover{border-color:#629aa9;}
+
+    .link-btn span{
+      font-size:1.1rem;
+      opacity:.9;
+    }
+
+    .icon{
+      width:18px;
+      height:18px;
+      display:inline-block;
+      fill:currentColor;
+      opacity:.85;
+    }
+
+    section{
+
+      padding:48px 0;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+
+    h2{
+      font-family:Montserrat;
+      font-size:1.7rem;
+      margin-bottom:24px;
+    }
+
+    .bio{
+      display:grid;
+      grid-template-columns:1fr 340px;
+      gap:32px;
+      align-items:start;
+    }
+
+    .portrait{
+      border-radius:var(--round);
+      overflow:hidden;
+      background:var(--card);
+    }
+
+    .portrait img{
+      width:100%;
+      display:block;
+    }
+
+    p{
+      font-size:1.35rem;
+    }
+
+    strong{
+      color:#fff;
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    footer{
+      padding:32px;
+      text-align:center;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    @media(max-width:900px){
+      .bio{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false;">
+
+<header>
+  <div class="wrap">
+    <h1>Krater</h1>
+    <p class="lead">Musiker, Produzent und Toningenieur.</p>
+
+    <nav>
+      <a href="#bio">Bio</a>
+      <a href="#links">Links</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="bio">
+  <div class="bio">
+
+    <div>
+      <h2>Bio / Werdegang</h2>
+
+      <p>
+        Meine musikalische Laufbahn begann Anfang der 1990er Jahre und entwickelte
+        sich über mehrere Jahrzehnte in unterschiedlichen Bands und Projekten.
+      </p>
+
+      <p>
+        Erste Bühnenerfahrungen sammelte ich mit <strong>Usura</strong> (1991–1993),
+        gefolgt von <strong>Venas Plutón</strong> (1994–1998).
+        Von 1998 bis 2009 war ich Teil von <strong>Ginferno</strong>.
+      </p>
+
+      <p>
+        Parallel dazu war ich in verschiedenen Projekten aktiv, darunter
+        <strong>Espatitis</strong> (2008–2010),
+        <strong>Días Libres</strong> (2010–2012) und
+        <strong><a href="https://todoband.wordpress.com/?fbclid=IwAR06HQrSYT78lcqhdT3xqyrKejWwnFPmFtdjt3gISvCfKWqAUAkjTEXhtzE" target="_blank" rel="noopener">Todo</a></strong> (2010–2014).
+      </p>
+
+      <p>
+        Von 2014 bis 2019 arbeitete ich mit der Band
+        <strong>
+          <a href="https://calbanda.wordpress.com/" target="_blank" rel="noopener">
+            Cal
+          </a>
+        </strong>.
+      </p>
+    </div>
+
+    <aside class="portrait">
+      <img src="assets/images/krater.jpg" alt="Krater" loading="lazy">
+    </aside>
+
+  </div>
+</section>
+
+<section id="links">
+  <h2>Links</h2>
+  <p style="color:var(--muted); margin-top:-10px; margin-bottom:24px;">
+    Selección de trabajos
+  </p>
+
+  <div class="link-buttons">
+
+    <div style="width:100%; margin-bottom:18px;"><strong>Todo</strong></div>
+
+    <a class="link-btn yt" href="https://www.youtube.com/playlist?list=PL1lxO6xCdfUb3XsTvbNhEWyJCHBt_Iqhy" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.376.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.376-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      <span>YouTube</span>
+    </a>
+
+    <a class="link-btn sp" href="https://open.spotify.com/intl-es/album/2bDA8Mx88nwMWhkF2EyX4Q" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.478 17.343a.748.748 0 0 1-1.03.247c-2.82-1.724-6.37-2.113-10.548-1.157a.75.75 0 1 1-.334-1.463c4.572-1.045 8.513-.603 11.655 1.332a.75.75 0 0 1 .257 1.041zm1.471-3.273a.935.935 0 0 1-1.287.309c-3.228-1.983-8.149-2.557-11.964-1.398a.936.936 0 0 1-.543-1.79c4.356-1.322 9.772-.682 13.457 1.563a.936.936 0 0 1 .337 1.316zm.126-3.407C15.61 8.58 8.43 8.388 4.809 9.486a1.123 1.123 0 1 1-.651-2.149c4.163-1.263 11.067-1.02 15.458 1.58a1.123 1.123 0 0 1-1.145 1.746z"/></svg>
+      <span>Spotify</span>
+    </a>
+
+    <div style="width:100%; margin:22px 0 8px;"><strong>Cal</strong></div>
+
+    <a class="link-btn bc" href="https://calmad.bandcamp.com/album/t-rmino" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 18.857h12.857L24 5.143H11.143z"/></svg>
+      <span>Bandcamp</span>
+    </a>
+
+  </div>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>
+    Für Anfragen, Kooperationen oder weitere Informationen:
+  </p>
+  <p>
+    <a href="mailto:nomareira@gmail.com">nomareira@gmail.com</a>
+  </p>
+</section>
+
+</main>
+
+<footer>
+  © Krater — Alle Rechte vorbehalten.
+</footer>
+
+<script>
+  document.addEventListener('keydown', e=>{
+    if((e.key==='s' || e.key==='p') && (e.ctrlKey || e.metaKey)){
+      e.preventDefault();
+    }
+  });
+</script>
+
+</body>
+</html>
