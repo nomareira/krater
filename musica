@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Krater — Música</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#0C0F0A;
+      color:white;
+      padding:32px;
+    }
+    h1{color:#FF784F}
+    h2{margin-top:40px}
+    audio{width:100%; margin-top:12px}
+    a{color:#FF784F; text-decoration:none}
+  </style>
+</head>
+
+<body>
+
+<h1>Krater</h1>
+<p><a href="index.html">← Volver a la página principal</a></p>
+
+<h2>Espatitis</h2>
+<audio controls src="assets/audio/espatitis/tema1.mp3"></audio>
+<audio controls src="assets/audio/espatitis/tema2.mp3"></audio>
+
+<h2>Días Libres</h2>
+<audio controls src="assets/audio/dias-libres/tema1.mp3"></audio>
+<audio controls src="assets/audio/dias-libres/tema2.mp3"></audio>
+
+</body>
+</html>
