@@ -5,33 +5,96 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Krater — Música</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+
   <style>
+    :root{
+      --bg:#0C0F0A;
+      --text:#ffffff;
+      --muted:#d1d1d1;
+      --accent:#FF784F;
+      --card:rgba(255,255,255,0.04);
+      --round:14px;
+    }
+
+    *{box-sizing:border-box}
+
     body{
       margin:0;
-      font-family: Arial, sans-serif;
-      background:#0C0F0A;
-      color:white;
+      font-family:Nunito, system-ui, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+      font-size:1.2rem;
       padding:32px;
     }
-    h1{color:#FF784F}
-    h2{margin-top:40px}
-    audio{width:100%; margin-top:12px}
-    a{color:#FF784F; text-decoration:none}
+
+    h1,
+    h2{
+      font-family:Montserrat, sans-serif;
+      color:var(--accent);
+    }
+
+    h1{
+      font-size:2.6rem;
+      margin-bottom:8px;
+    }
+
+    h2{
+      font-size:1.6rem;
+      margin-top:48px;
+      margin-bottom:16px;
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    audio{
+      width:100%;
+      margin-bottom:18px;
+      border-radius:var(--round);
+      filter:invert(1) hue-rotate(180deg);
+    }
+
+    .back{
+      margin-bottom:32px;
+      display:inline-block;
+    }
   </style>
 </head>
 
 <body>
 
-<h1>Krater</h1>
-<p><a href="index.html">← Zurück zur Hauptseite</a></p>
+  <h1>Krater</h1>
 
-<h2>Espatitis</h2>
-<audio controls src="assets/audio/espatitis/tema1.mp3"></audio>
-<audio controls src="assets/audio/espatitis/tema2.mp3"></audio>
+  <a class="back" href="index.html">← Zurück zur Hauptseite</a>
 
-<h2>Días Libres</h2>
-<audio controls src="assets/audio/dias-libres/tema1.mp3"></audio>
-<audio controls src="assets/audio/dias-libres/tema2.mp3"></audio>
+  <h2>Espatitis</h2>
+
+  <audio controls preload="none">
+    <source src="assets/audio/espatitis/tema1.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio controls preload="none">
+    <source src="assets/audio/espatitis/tema2.mp3" type="audio/mpeg">
+  </audio>
+
+  <h2>Días Libres</h2>
+
+  <audio controls preload="none">
+    <source src="assets/audio/dias-libres/tema1.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio controls preload="none">
+    <source src="assets/audio/dias-libres/tema2.mp3" type="audio/mpeg">
+  </audio>
 
 </body>
 </html>
