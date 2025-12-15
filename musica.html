@@ -66,6 +66,31 @@
       margin-bottom:32px;
       display:inline-block;
     }
+    .project-grid{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.project-image img{
+  width: 100%;
+  border-radius: var(--round);
+  display: block;
+}
+
+.project-audio audio{
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+@media(max-width: 800px){
+  .project-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
   </style>
 </head>
 
