@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Krater — Música</title>
+  <title>Krater — Espatitis / Días Libres</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -56,41 +56,48 @@
       text-decoration:underline;
     }
 
-    audio{
-      width:100%;
-      margin-bottom:18px;
-      border-radius:var(--round);
-    }
-
     .back{
       margin-bottom:32px;
       display:inline-block;
     }
+
+    /* --- LAYOUT PROYECTOS --- */
+
     .project-grid{
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 32px;
-  align-items: start;
-  margin-bottom: 48px;
-}
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:32px;
+      align-items:start;
+      margin-bottom:48px;
+    }
 
-.project-image img{
-  width: 100%;
-  border-radius: var(--round);
-  display: block;
-}
+    .project-image img{
+      width:100%;
+      border-radius:var(--round);
+      display:block;
+    }
 
-.project-audio audio{
-  width: 100%;
-  margin-bottom: 18px;
-}
+    .project-image.secondary{
+      margin:24px 0 32px 0;
+    }
 
-@media(max-width: 800px){
-  .project-grid{
-    grid-template-columns: 1fr;
-  }
-}
+    .project-image.secondary img{
+      max-width:420px;
+    }
 
+    .project-audio audio{
+      width:100%;
+      margin-bottom:18px;
+      background:var(--accent);
+      border-radius:999px;
+      padding:6px 10px;
+    }
+
+    @media(max-width:800px){
+      .project-grid{
+        grid-template-columns:1fr;
+      }
+    }
   </style>
 </head>
 
@@ -100,43 +107,66 @@
 
   <a class="back" href="index.html">← Zurück zur Hauptseite</a>
 
+  <!-- ================= ESPATITIS ================= -->
+
   <h2>Espatitis</h2>
-<div class="project-grid">
 
-  <div class="project-image">
-    <img src="assets/images/espatitis.jpg" alt="Espatitis">
+  <div class="project-grid">
+
+    <!-- Imagen principal -->
+    <div class="project-image">
+      <img src="assets/images/espatitis.jpg" alt="Espatitis">
+    </div>
+
+    <!-- Audios -->
+    <div class="project-audio">
+
+      <audio controls preload="none">
+        <source src="assets/audio/espatitis/tema1.mp3" type="audio/mpeg">
+      </audio>
+
+      <audio controls preload="none">
+        <source src="assets/audio/espatitis/tema2.mp3" type="audio/mpeg">
+      </audio>
+
+      <!-- Imagen secundaria entre tema 2 y 3 -->
+      <div class="project-image secondary">
+        <img src="assets/images/espatitis-dos.jpg" alt="Espatitis">
+      </div>
+
+      <audio controls preload="none">
+        <source src="assets/audio/espatitis/tema3.mp3" type="audio/mpeg">
+      </audio>
+
+      <audio controls preload="none">
+        <source src="assets/audio/espatitis/tema4.mp3" type="audio/mpeg">
+      </audio>
+
+    </div>
   </div>
 
-  <div class="project-audio">
-    <audio controls preload="none">
-      <source src="assets/audio/espatitis/tema1.mp3" type="audio/mpeg">
-    </audio>
-
-    <audio controls preload="none">
-      <source src="assets/audio/espatitis/tema2.mp3" type="audio/mpeg">
-    </audio>
-  </div>
-
-</div>
-
-  
-  <audio controls preload="none">
-    <source src="assets/audio/espatitis/tema1.mp3" type="audio/mpeg">
-  </audio>
-
-  <audio controls preload="none">
-    <source src="assets/audio/espatitis/tema2.mp3" type="audio/mpeg">
-  </audio>
+  <!-- ================= DÍAS LIBRES ================= -->
 
   <h2>Días Libres</h2>
 
-  <audio controls preload="none">
-    <source src="assets/audio/dias-libres/tema1.mp3" type="audio/mpeg">
-  </audio>
+  <div class="project-grid">
 
-  <audio controls preload="none">
-    <source src="assets/audio/dias-libres/tema2.mp3" type="audio/mpeg">
-  </audio>
+    <div class="project-image">
+      <img src="assets/images/dias-libres.jpg" alt="Días Libres">
+    </div>
+
+    <div class="project-audio">
+
+      <audio controls preload="none">
+        <source src="assets/audio/dias-libres/tema1.mp3" type="audio/mpeg">
+      </audio>
+
+      <audio controls preload="none">
+        <source src="assets/audio/dias-libres/tema2.mp3" type="audio/mpeg">
+      </audio>
+
+    </div>
+  </div>
 
 </body>
 </html>
