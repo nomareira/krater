@@ -106,6 +106,42 @@
     @media(max-width:900px){
       .bio{grid-template-columns:1fr}
     }
+    /* Flecha volver arriba */
+.back-to-top{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--accent);
+  cursor:pointer;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease, transform .25s ease;
+  z-index:1000;
+}
+
+.back-to-top.visible{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.back-to-top:hover{
+  transform:translateY(-3px);
+}
+
+.back-to-top svg{
+  width:18px;
+  height:18px;
+  fill:currentColor;
+}
+
   </style>
 </head>
 
@@ -248,6 +284,21 @@
 </main>
 
 <footer>© Krater — Alle Rechte vorbehalten.</footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 5l-7 7h4v7h6v-7h4z"/>
+  </svg>
+</button>
+<script>
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 300);
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 </body>
 </html>
