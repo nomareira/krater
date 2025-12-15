@@ -72,20 +72,21 @@
       margin:0 auto;
     }
 
-    /* ---------- BLOQUES DE AUDIO ---------- */
+    /* ---------- BLOQUES AUDIO / VIDEO ---------- */
 
-    .audio-block{
+    .media-block{
       background:var(--accent);
       border-radius:var(--round);
-      padding:10px 14px;
+      padding:12px;
       margin-bottom:18px;
     }
 
-    .audio-block audio{
+    .media-block audio,
+    .media-block video{
       width:100%;
       background:#ffffff;
-      border-radius:999px;
-      padding:4px 8px;
+      border-radius:12px;
+      display:block;
     }
 
     /* ---------- BOTÓN SUBIR ARRIBA ---------- */
@@ -140,13 +141,13 @@
     <img src="assets/images/espatitis.jpg" alt="Espatitis">
   </div>
 
-  <div class="audio-block">
+  <div class="media-block">
     <audio controls preload="none">
       <source src="assets/audio/espatitis/tema1.mp3" type="audio/mpeg">
     </audio>
   </div>
 
-  <div class="audio-block">
+  <div class="media-block">
     <audio controls preload="none">
       <source src="assets/audio/espatitis/tema2.mp3" type="audio/mpeg">
     </audio>
@@ -156,13 +157,13 @@
     <img src="assets/images/espatitis-dos.jpg" alt="Espatitis">
   </div>
 
-  <div class="audio-block">
+  <div class="media-block">
     <audio controls preload="none">
       <source src="assets/audio/espatitis/tema3.mp3" type="audio/mpeg">
     </audio>
   </div>
 
-  <div class="audio-block">
+  <div class="media-block">
     <audio controls preload="none">
       <source src="assets/audio/espatitis/tema4.mp3" type="audio/mpeg">
     </audio>
@@ -176,13 +177,16 @@
     <img src="assets/images/dias-libres.jpg" alt="Días Libres">
   </div>
 
-  <div class="audio-block">
-    <audio controls preload="none">
-      <source src="assets/audio/dias-libres/tema1.mp3" type="audio/mpeg">
-    </audio>
+  <!-- VIDEO (sustituye al primer audio) -->
+  <div class="media-block">
+    <video controls preload="none">
+      <source src="assets/video/dias-libres/video1.mp4" type="video/mp4">
+      Tu navegador no soporta vídeo HTML5.
+    </video>
   </div>
 
-  <div class="audio-block">
+  <!-- Audio 2 -->
+  <div class="media-block">
     <audio controls preload="none">
       <source src="assets/audio/dias-libres/tema2.mp3" type="audio/mpeg">
     </audio>
@@ -198,7 +202,7 @@
   <script>
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('visible', window.scrollY > 300);
+      backToTop.classList.toggle('visible', window.scrollY > 100);
     });
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
