@@ -61,6 +61,29 @@
     }
     .portrait img{width:100%;display:block;}
 
+    .link-buttons{display:flex;flex-wrap:wrap;gap:14px;}
+    .link-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      background:var(--card);
+      border-radius:var(--round);
+      font-family:Montserrat;
+      font-weight:700;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,0.08);
+      transition:transform .15s ease, background .15s ease, border .15s ease;
+    }
+    .link-btn:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.2);
+    }
+    .link-btn.yt:hover{border-color:#ff3d3d;}
+    .link-btn.sp:hover{border-color:#1db954;}
+    .link-btn.bc:hover{border-color:#629aa9;}
+
     footer{padding:32px;text-align:center;color:var(--muted);font-size:0.95rem;}
 
     @media(max-width:900px){
@@ -91,60 +114,15 @@
     <div>
       <h2>Bio</h2>
 
-      <p>
-        <strong>Ramón Moreira</strong> ist Gitarrist, Komponist und Produzent und gehört
-        seit Beginn der 1990er-Jahre zum kreativen Kern der spanischen Independent-
-        und Underground-Musikszene. Seine Laufbahn entwickelte sich parallel zur
-        zweiten Welle des spanischen Indie und ist geprägt von stilistischer Offenheit,
-        Experimentierfreude und einer konsequent eigenständigen Haltung.
-      </p>
+      <p><strong>Ramón Moreira</strong> ist Gitarrist, Komponist und Produzent und gehört seit Beginn der 1990er-Jahre zum kreativen Kern der spanischen Independent- und Underground-Musikszene.</p>
 
-      <p>
-        Erstmals größere Aufmerksamkeit erlangte er Anfang der 1990er-Jahre als Mitglied
-        von <strong>USURA</strong>, einer der ersten Bands, die beim legendären Label
-        <strong>Elefant Records</strong> unter Vertrag standen. Ramón Moreira stieß 1991
-        als zweite Gitarre zur Band und war Teil jener Phase, in der USURA mit dem Album
-        <em>Hake Romana</em> (1993) nationale Anerkennung erlangte. Die Auflösung der Band
-        im Jahr 1994 trug wesentlich zu ihrem anhaltenden Kultstatus bei.
-      </p>
+      <p>Erstmals größere Aufmerksamkeit erlangte er als Mitglied von <strong>USURA</strong>, einer der ersten Bands bei <strong>Elefant Records</strong>. Ramón Moreira stieß 1991 als zweite Gitarre zur Band und war Teil der prägenden Phase rund um das Album <em>Hake Romana</em> (1993).</p>
 
-      <p>
-        Nach dem Ende von USURA gründete Ramón Moreira gemeinsam mit weiteren ehemaligen
-        Bandmitgliedern <strong>Venas Plutón</strong>. Zwischen 1994 und 1997 entwickelte
-        die Band einen eigenständigen Sound zwischen rohem Pop, melodischer Fragilität
-        und dunkler Intensität. Die Alben <em>Binocular</em> (1995) und
-        <em>Petaco</em> (1997), veröffentlicht bei <strong>Jabalina</strong>, wurden von
-        der Fachpresse einhellig gelobt.
-      </p>
+      <p>Nach dem Ende von USURA gründete er <strong>Venas Plutón</strong> (1994–1997), deren Alben <em>Binocular</em> und <em>Petaco</em> bei <strong>Jabalina</strong> erschienen.</p>
 
-      <p>
-        Anfang der 2000er-Jahre rief Ramón Moreira <strong>Ginferno</strong> ins Leben,
-        ein Projekt, das sich zu einer festen Institution der madrilenischen
-        Underground-Szene entwickelte. Das selbstbetitelte Debütalbum erschien 2003
-        bei <strong>Alehop!</strong>, <strong>Beat Generation</strong> und
-        <strong>Gssh Gssh</strong> und erhielt hervorragende Kritiken.
-      </p>
+      <p>Mit <strong>Ginferno</strong> etablierte sich Ramón Moreira ab 2003 als feste Größe der madrilenischen Underground-Szene. Parallel dazu war er Teil des instrumentalen Projekts <strong>CAL</strong>, das 2017 das Album <em>Término</em> veröffentlichte.</p>
 
-      <p>
-        Parallel dazu war Ramón Moreira Teil von <strong>CAL</strong>, einem instrumentalen
-        Projekt, das sich bewusst von klassischen Songstrukturen löst. Mit ungewöhnlichen
-        Gitarrenstimmungen, komplexen Rhythmusstrukturen und einem konzeptuellen Ansatz
-        veröffentlichte CAL 2017 das Album <em>Término</em> bei
-        <strong>Mascarpone Discos</strong>.
-      </p>
-
-      <p>
-        Mit <strong>TODO</strong> fand Ramón Moreira erneut mit <strong>Ana Béjar</strong>
-        zusammen. Das Projekt steht für eine freie, schwer einzuordnende Musik, in der
-        Folk-Anklänge, Blues, Chorgesänge sowie mediterrane und irische Einflüsse
-        miteinander verschmelzen.
-      </p>
-
-      <p>
-        Seine Arbeit ist bis heute geprägt von kontinuierlicher Entwicklung und einer
-        Haltung, die Musik als offenen Raum für Forschung, Experiment und persönlichen
-        Ausdruck versteht.
-      </p>
+      <p>In <strong>TODO</strong> arbeitete er erneut mit <strong>Ana Béjar</strong> zusammen und entwickelte eine offene, genreübergreifende musikalische Sprache.</p>
     </div>
 
     <aside class="portrait">
@@ -155,7 +133,19 @@
 
 <section id="links">
   <h2>Links</h2>
-  <!-- aquí mantienes tus links tal como ya los tienes -->
+  <p style="color:var(--muted);margin-bottom:24px;">Selección de trabajos</p>
+
+  <div class="link-buttons">
+    <div style="width:100%;"><strong>Todo</strong></div>
+    <a class="link-btn yt" href="https://www.youtube.com/playlist?list=PL1lxO6xCdfUb3XsTvbNhEWyJCHBt_Iqhy" target="_blank">YouTube</a>
+    <a class="link-btn sp" href="https://open.spotify.com/album/2bDA8Mx88nwMWhkF2EyX4Q" target="_blank">Spotify</a>
+
+    <div style="width:100%;margin-top:20px;"><strong>Cal</strong></div>
+    <a class="link-btn bc" href="https://calmad.bandcamp.com/album/t-rmino" target="_blank">Bandcamp</a>
+
+    <div style="width:100%;margin-top:20px;"><strong>Espatitis / Días Libres</strong></div>
+    <a class="link-btn" href="musica.html">Audio / Video</a>
+  </div>
 </section>
 
 <section id="kontakt">
