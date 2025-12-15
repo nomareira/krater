@@ -87,6 +87,43 @@
       border-radius:999px;
       padding:4px 8px;
     }
+
+    /* ---------- BOTÓN SUBIR ARRIBA ---------- */
+
+    .back-to-top{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--accent);
+      cursor:pointer;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .25s ease, transform .25s ease;
+      z-index:1000;
+    }
+
+    .back-to-top.visible{
+      opacity:1;
+      pointer-events:auto;
+    }
+
+    .back-to-top:hover{
+      transform:translateY(-3px);
+    }
+
+    .back-to-top svg{
+      width:18px;
+      height:18px;
+      fill:currentColor;
+    }
   </style>
 </head>
 
@@ -99,38 +136,32 @@
 
   <h2>Espatitis</h2>
 
-  <!-- Foto 1 -->
   <div class="project-image">
     <img src="assets/images/espatitis.jpg" alt="Espatitis">
   </div>
 
-  <!-- Audio 1 -->
   <div class="audio-block">
     <audio controls preload="none">
       <source src="assets/audio/espatitis/tema1.mp3" type="audio/mpeg">
     </audio>
   </div>
 
-  <!-- Audio 2 -->
   <div class="audio-block">
     <audio controls preload="none">
       <source src="assets/audio/espatitis/tema2.mp3" type="audio/mpeg">
     </audio>
   </div>
 
-  <!-- Foto 2 -->
   <div class="project-image">
     <img src="assets/images/espatitis-dos.jpg" alt="Espatitis">
   </div>
 
-  <!-- Audio 3 -->
   <div class="audio-block">
     <audio controls preload="none">
       <source src="assets/audio/espatitis/tema3.mp3" type="audio/mpeg">
     </audio>
   </div>
 
-  <!-- Audio 4 -->
   <div class="audio-block">
     <audio controls preload="none">
       <source src="assets/audio/espatitis/tema4.mp3" type="audio/mpeg">
@@ -156,6 +187,23 @@
       <source src="assets/audio/dias-libres/tema2.mp3" type="audio/mpeg">
     </audio>
   </div>
+
+  <!-- BOTÓN SUBIR ARRIBA -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 5l-7 7h4v7h6v-7h4z"/>
+    </svg>
+  </button>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 </html>
