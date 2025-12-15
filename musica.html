@@ -61,7 +61,7 @@
       display:inline-block;
     }
 
-    /* --- LAYOUT PROYECTOS --- */
+    /* ---------- LAYOUT PROYECTOS ---------- */
 
     .project-grid{
       display:grid;
@@ -78,19 +78,27 @@
     }
 
     .project-image.secondary{
-      margin:24px 0 32px 0;
+      margin:28px 0 36px 0;
     }
 
     .project-image.secondary img{
       max-width:420px;
     }
 
-    .project-audio audio{
-      width:100%;
-      margin-bottom:18px;
+    /* ---------- BLOQUES DE AUDIO ---------- */
+
+    .audio-block{
       background:var(--accent);
+      border-radius:var(--round);
+      padding:10px 14px;
+      margin-bottom:18px;
+    }
+
+    .audio-block audio{
+      width:100%;
+      background:#ffffff;
       border-radius:999px;
-      padding:6px 10px;
+      padding:4px 8px;
     }
 
     @media(max-width:800px){
@@ -121,26 +129,34 @@
     <!-- Audios -->
     <div class="project-audio">
 
-      <audio controls preload="none">
-        <source src="assets/audio/espatitis/tema1.mp3" type="audio/mpeg">
-      </audio>
+      <div class="audio-block">
+        <audio controls preload="none">
+          <source src="assets/audio/espatitis/tema1.mp3" type="audio/mpeg">
+        </audio>
+      </div>
 
-      <audio controls preload="none">
-        <source src="assets/audio/espatitis/tema2.mp3" type="audio/mpeg">
-      </audio>
+      <div class="audio-block">
+        <audio controls preload="none">
+          <source src="assets/audio/espatitis/tema2.mp3" type="audio/mpeg">
+        </audio>
+      </div>
 
-      <!-- Imagen secundaria entre tema 2 y 3 -->
+      <!-- Imagen secundaria -->
       <div class="project-image secondary">
         <img src="assets/images/espatitis-dos.jpg" alt="Espatitis">
       </div>
 
-      <audio controls preload="none">
-        <source src="assets/audio/espatitis/tema3.mp3" type="audio/mpeg">
-      </audio>
+      <div class="audio-block">
+        <audio controls preload="none">
+          <source src="assets/audio/espatitis/tema3.mp3" type="audio/mpeg">
+        </audio>
+      </div>
 
-      <audio controls preload="none">
-        <source src="assets/audio/espatitis/tema4.mp3" type="audio/mpeg">
-      </audio>
+      <div class="audio-block">
+        <audio controls preload="none">
+          <source src="assets/audio/espatitis/tema4.mp3" type="audio/mpeg">
+        </audio>
+      </div>
 
     </div>
   </div>
@@ -157,13 +173,17 @@
 
     <div class="project-audio">
 
-      <audio controls preload="none">
-        <source src="assets/audio/dias-libres/tema1.mp3" type="audio/mpeg">
-      </audio>
+      <div class="audio-block">
+        <audio controls preload="none">
+          <source src="assets/audio/dias-libres/tema1.mp3" type="audio/mpeg">
+        </audio>
+      </div>
 
-      <audio controls preload="none">
-        <source src="assets/audio/dias-libres/tema2.mp3" type="audio/mpeg">
-      </audio>
+      <div class="audio-block">
+        <audio controls preload="none">
+          <source src="assets/audio/dias-libres/tema2.mp3" type="audio/mpeg">
+        </audio>
+      </div>
 
     </div>
   </div>
